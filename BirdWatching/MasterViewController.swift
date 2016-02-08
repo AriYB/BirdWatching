@@ -67,7 +67,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             print("Could not fetch \(error), \(error.userInfo)")
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

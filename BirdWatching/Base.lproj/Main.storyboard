@@ -69,7 +69,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="dZi-fj-CAL" kind="showDetail" id="Ihc-5X-hcZ"/>
+                                    <segue destination="dZi-fj-CAL" kind="showDetail" identifier="" id="Ihc-5X-hcZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -118,12 +118,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="One-rF-hjC">
                                 <rect key="frame" x="165" y="137" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-e5-c70">
                                 <rect key="frame" x="165" y="204" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,12 +131,12 @@
                     <navigationItem key="navigationItem" title="Add Item" id="0ws-gv-DaD">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BYk-TL-u3l">
                             <connections>
-                                <segue destination="Cfg-6z-rcP" kind="unwind" unwindAction="cancelToMasterViewController:" id="2N0-3C-Rue"/>
+                                <segue destination="Cfg-6z-rcP" kind="unwind" identifier="cancelToMasterViewController" unwindAction="cancelToMasterViewController:" id="2N0-3C-Rue"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="reS-l6-qCs">
                             <connections>
-                                <segue destination="Cfg-6z-rcP" kind="unwind" unwindAction="saveBirdDetail:" id="hxI-rG-OnI"/>
+                                <segue destination="Cfg-6z-rcP" kind="unwind" identifier="saveBirdDetail" unwindAction="saveBirdDetail:" id="hxI-rG-OnI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
