@@ -34,7 +34,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
         */
         
-        Events = coreDataWrapper.fetch() as! [Sighting]
+        //Events = coreDataWrapper.fetch() as! [Sighting]
+        
+        
     }
     
     ///////////////////////////////////////////////////////////////////////////////////
@@ -80,10 +82,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+        
         newManagedObject.setValue(NSDate(), forKey: "timeStamp")
         newManagedObject.setValue("Birdy", forKey: "birdType")
         newManagedObject.setValue("Detroit", forKey: "location")
-             
+        
+        
         // Save the context.
         do {
             try context.save()
@@ -122,13 +126,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        //self.configureCell(cell, atIndexPath: indexPath)
+        self.configureCell(cell, atIndexPath: indexPath)
         
         // Configure the cell...
-        let bird = Events[indexPath.row] as Sighting
+        let birdinfo = Events[indexPath.row] as Sighting
         
         // Configure the cell...
-        cell.textLabel?.text = bird.birdType
+        cell.textLabel?.text = birdinfo.birdType
+        
+        cell.detailTextLabel?.text = birdinfo.location
         return cell
     }
 
@@ -241,12 +247,36 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
      */
     
     @IBAction func cancelToMasterViewController(segue:UIStoryboardSegue) {
+        
+        
     }
     
     @IBAction func saveBirdDetail(segue:UIStoryboardSegue) {
+    
+        if let ItemViewController = segue.sourceViewController as? MasterViewController {
+            
+            if let birds = ItemViewController.
+        }
+
         
-        //use core data to save the information
-        //saveContents(b.text!, location: locationText.text!)
+        
+    }
+    // MARK: Functions
+    
+    func saveContents(birdType: String, location: String) {
+        // 1. Create a managedObject to save it
+        let bird = Sighting(entity: coreDataWrapper.entity, insertIntoManagedObjectContext: coreDataWrapper.managedObjectContext)
+        
+        // 2. Assign values
+        bird.birdType = birdType
+        bird.location = location
+        // bird.date = NSDate()
+        
+        // 3. Save it to CoreData
+        coreDataWrapper.save()
+        
+        // 4. Append it to the array of the managedObject
+        Events.append(bird)
         
         
         

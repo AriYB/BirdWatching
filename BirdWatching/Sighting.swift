@@ -12,10 +12,12 @@ import CoreData
 class Sighting: NSManagedObject {
     
     // Insert code here to add functionality to your managed object subclass
-    
-    @NSManaged var date: NSDate?
-    @NSManaged var location: String?
     @NSManaged var birdType: String?
+    @NSManaged var location: String?
+    @NSManaged var date: NSDate?
+    
+   
+
     
     
 }

@@ -13,8 +13,6 @@
 		7BF9E8CC1C666A490090C735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF9E8CA1C666A490090C735 /* Main.storyboard */; };
 		7BF9E8CE1C666A490090C735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BF9E8CD1C666A490090C735 /* Assets.xcassets */; };
 		7BF9E8D11C666A490090C735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF9E8CF1C666A490090C735 /* LaunchScreen.storyboard */; };
-		7BF9E8D91C666AF20090C735 /* BirdSighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF9E8D81C666AF20090C735 /* BirdSighting.swift */; };
-		7BF9E8DB1C66781F0090C735 /* BirdSightingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF9E8DA1C66781F0090C735 /* BirdSightingDataController.swift */; };
 		7BF9E8DD1C66D19C0090C735 /* CoreDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF9E8DC1C66D19C0090C735 /* CoreDataWrapper.swift */; };
 		7BF9E8DF1C66DB240090C735 /* Sighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF9E8DE1C66DB240090C735 /* Sighting.swift */; };
 		7BF9E9061C67C9CE0090C735 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF9E9051C67C9CE0090C735 /* DetailViewController.swift */; };
@@ -30,8 +28,6 @@
 		7BF9E8CD1C666A490090C735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BF9E8D01C666A490090C735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BF9E8D21C666A490090C735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BF9E8D81C666AF20090C735 /* BirdSighting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdSighting.swift; sourceTree = "<group>"; };
-		7BF9E8DA1C66781F0090C735 /* BirdSightingDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdSightingDataController.swift; sourceTree = "<group>"; };
 		7BF9E8DC1C66D19C0090C735 /* CoreDataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataWrapper.swift; sourceTree = "<group>"; };
 		7BF9E8DE1C66DB240090C735 /* Sighting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sighting.swift; sourceTree = "<group>"; };
 		7BF9E9051C67C9CE0090C735 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -75,8 +71,6 @@
 				7BF9E92C1C67D0EB0090C735 /* ItemViewController.swift */,
 				7BF9E8CA1C666A490090C735 /* Main.storyboard */,
 				7BF9E8DE1C66DB240090C735 /* Sighting.swift */,
-				7BF9E8D81C666AF20090C735 /* BirdSighting.swift */,
-				7BF9E8DA1C66781F0090C735 /* BirdSightingDataController.swift */,
 				7BF9E8CD1C666A490090C735 /* Assets.xcassets */,
 				7BF9E8CF1C666A490090C735 /* LaunchScreen.storyboard */,
 				7BF9E8D21C666A490090C735 /* Info.plist */,
@@ -157,8 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF9E8C21C666A490090C735 /* AppDelegate.swift in Sources */,
-				7BF9E8D91C666AF20090C735 /* BirdSighting.swift in Sources */,
-				7BF9E8DB1C66781F0090C735 /* BirdSightingDataController.swift in Sources */,
 				7BF9E8C51C666A490090C735 /* BirdWatching.xcdatamodeld in Sources */,
 				7BF9E8C71C666A490090C735 /* MasterViewController.swift in Sources */,
 				7BF9E8DF1C66DB240090C735 /* Sighting.swift in Sources */,
@@ -314,6 +306,7 @@
 				7BF9E8D71C666A490090C735 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

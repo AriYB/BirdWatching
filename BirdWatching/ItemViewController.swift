@@ -19,6 +19,9 @@ class ItemViewController: UIViewController {
     let entityName = "Event"
     var coreDataWrapper = CoreDataWrapper(entityName: "Event")
     var Events = [Sighting]()
+    var bird:Sighting?
+    
+    var test:String?
     
     
     override func viewDidLoad() {
@@ -41,29 +44,14 @@ class ItemViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         if segue.identifier == "saveBirdDetail" {
             //Save the contents of the text field into Core Data to be placed in the Master Table View.
-            saveContents(birdTypeField.text!, location: locationField.text!)
+            bird = Sighting(birdType: birdTypeField.text, location: locationField.text, date: NSDate?)
+            
+
         }
         // Pass the selected object to the new view controller.
     }
     
-    // MARK: Functions
-    
-    func saveContents(birdType: String, location: String) {
-        // 1. Create a managedObject to save it
-        let bird = Sighting(entity: coreDataWrapper.entity, insertIntoManagedObjectContext: coreDataWrapper.managedObjectContext)
-        
-        // 2. Assign values
-        bird.birdType = birdType
-        bird.location = location
-       // bird.date = NSDate()
-        
-        // 3. Save it to CoreData
-        coreDataWrapper.save()
-        
-        // 4. Append it to the array of the managedObject
-        Events.append(bird)
-        
-    }
+
     
 
 
